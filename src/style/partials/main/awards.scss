@@ -1,0 +1,188 @@
+.awards {
+    position: relative;
+
+    @include tablet-1200 {
+        padding-top: 120px;
+    }
+
+
+    @include mobile {
+        padding-left: 50px;
+    }
+
+    @include mobile-620 {
+        padding-top: 80px;
+        padding-left: 20px;
+    }
+
+    &__title {
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+
+        @include tablet {
+            font-size: 56px;
+        }
+
+        @include tablet {
+            font-size: 48px;
+        }
+
+        @include mobile {
+            font-size: 36px;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__awards {
+        margin-top: toVh(70);
+
+        @include tablet {
+            margin-top: toVh(50);
+        }
+
+        @include tablet-992 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: toVh(35);
+        }
+    }
+
+    &__award {
+        display: flex;
+        align-items: center;
+        padding-top: toVh(20);
+        padding-bottom: toVh(20);
+        font-family: SF Pro Display;
+        line-height: 140%;
+
+        @include tablet-992 {
+            padding-top: 20px;
+            width: 50%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                margin-top: 15px;
+            }
+        }
+
+        @include mobile-620 {
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #787A7C;
+
+            @include tablet-992 {
+                border-bottom-width: 0;
+            }
+        }
+    }
+
+    &__award-img-wrapper {
+        margin-right: 10%;
+        width: 100%;
+        max-width: 253px;
+        height: toVh(128);
+        position: relative;
+        overflow: hidden;
+
+        @include tablet {
+            max-width: 200px;
+
+        }
+
+        @include tablet-1200 {
+            margin-right: 5%;
+        }
+
+        @include tablet-1000 {
+            margin-top: 0;
+            margin-right: 0;
+            height: 128px;
+            max-width: 253px;
+        }
+
+        @include mobile-620 {
+            max-width: 100%;
+            width: 100%;
+            height: 128px;
+            margin: 0 auto;
+        }
+    }
+
+    &__award-img {
+        position: absolute;
+        object-fit: cover;
+        object-position: top;
+
+        @include mobile-620 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__award-title {
+        font-size: 40px;
+        line-height: 120%;
+        color: #F3F3F3;
+        width: 45%;
+        display: flex;
+        justify-content: flex-start;
+
+        @include tablet {
+            font-size: 24px;
+            width: 42%;
+        }
+
+        @include tablet-1000 {
+            width: auto;
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    &__award-name {
+        font-size: 18px;
+        color: #F3F3F3;
+        width: 10%;
+        display: flex;
+        justify-content: flex-start;
+
+        @include tablet {
+            width: 15%;
+        }
+
+        @include tablet-992 {
+            width: auto;
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    &__award-date {
+        font-size: 18px;
+        color: #F3F3F3;
+        margin-left: auto;
+
+        @include tablet-992 {
+            margin: 0 auto;
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+}

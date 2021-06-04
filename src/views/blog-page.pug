@@ -1,0 +1,75 @@
+extends layouts/default
+block main
+    .wrapper#preloader
+        .main-circle
+            .green-circle
+                .brown-circle
+    .blog-bg
+        .img 
+            .container-fluid
+                img.img-img(src="img/blog/blog-main.jpg", alt="")
+        .blog
+            .container-fluid 
+                .blog__inner 
+                    span.blog__date 30 March 2021    
+                    h1.blog__title Sales market growth hacking direct mailing stock lean startup analytics termsheet return 
+                    .line.blog__line
+                    .blog__main 
+                        p.blog__text--big Ramen partner network prototype traction. Buzz metrics iPad ramen learning curve buyer handshake scrum project pitch research & development direct mailing client vesting period MVP. Traction validation customer crowdsource focus buyer. Return on investment seed money success long tail first mover advantage network effects beta scrum project stock value proposition termsheet.
+                        p.blog__text Metrics crowdfunding niche market interaction design series A financing crowdsource ramen success conversion analytics venture launch party. Focus advisor validation early adopters gen-z first mover advantage paradigm shift venture learning curve influencer. Ramen buyer channels mass market buzz accelerator interaction design strategy business model canvas. IPad bootstrapping customer value proposition business plan analytics business model canvas creative partner network assets pitch.
+                        img.blog__img.blog__img--mt-120(src="img/blog/blog-img-1.jpg", alt="")
+                        p.blog__text.blog__text--mt-120 Supply chain entrepreneur funding facebook user experience early adopters infographic holy grail termsheet twitter business-to-business agile development vesting period release. Social media seed round supply chain client buyer strategy startup founders accelerator disruptive market analytics. Analytics user experience interaction design influencer non-disclosure agreement. Network effects niche market long tail business model canvas virality venture channels stock gen-z.
+                        p.blog__text--big.blog__text--big--mt-70 “Creative startup iPad influencer interaction design graphical user interface incubator success hypotheses funding first mover advantage. Seed money graphical user interface backing”.
+                        p.blog__text Ramen business-to-consumer metrics. Business-to-consumer virality termsheet technology disruptive focus user experience incubator network effects paradigm shift business plan agile development. Innovator strategy graphical user interface stealth partnership iPad niche market alpha direct mailing startup buyer. Direct mailing early adopters ramen social proof iPad bootstrapping product management churn rate. Customer termsheet hackathon backing buzz iPad startup assets. Sales accelerator customer lean startup ownership leverage validation.
+                        .blog__img-wrap 
+                            img.blog__img(src="img/blog/blog-img-2.jpg", alt="")
+                            img.blog__img.blog__img--mt-20(src="img/blog/blog-img-3.jpg", alt="")
+                        .blog-more.blog__more
+                            .blog-more__author 
+                                span.blog-more__author-text Author
+                                span.blog-more__author-name George Lewis
+                            .blog-more__share 
+                                span.blog-more__share-text Share
+                                .links 
+                                    a.links__item(href="#")
+                                        img(src="img/links/in.svg", alt="")
+                                    a.links__item(href="#") 
+                                        img(src="img/links/twitter.svg", alt="")
+                                    a.links__item(href="#") 
+                                        img(src="img/links/facebook.svg", alt="")
+                                    a.links__item(href="#") 
+                                        img(src="img/links/instagram.svg", alt="")
+                    .line.blog__line.blog__line--mt-70
+                    .blog-comments 
+                        h2.blog-comments__title Comments (2)
+                        .blog-comments__wrap
+                            .comment.blog-comments__item
+                                img.comment__avatar(src="img/blog/avatar-1.jpg", alt="")
+                                .comment__wrapper
+                                    span.comment__date March 18, 2021
+                                    .comment__wrap 
+                                        h3.comment__name Kamal Metcalfe
+                                        a.comment__reply(href="#") Reply 
+                                    p.comment__text Direct mailing client stock. Direct mailing accelerator learning curve business-to-business release. Hackathon long tail traction venture founders accelerator gen-z analytics incubator backing MVP responsive web design. Virality release alpha termsheet leverage. 
+                            .comment.blog-comments__item.comment--reply
+                                img.comment__avatar(src="img/blog/avatar-2.jpg", alt="")
+                                .comment__wrapper
+                                    span.comment__date March 21, 2021
+                                    .comment__wrap 
+                                        h3.comment__name Agnes Samuels
+                                        a.comment__reply(href="#") Reply 
+                                    p.comment__text Virality bootstrapping angel investor entrepreneur direct mailing termsheet analytics android. Supply chain iteration social proof.
+                        h3.blog-comments__subtitle Leave your comment
+                        form.comment-form.blog-comments__form.js-form(action="#") 
+                            .comment-form__wrap 
+                                .comment-form__label
+                                    input.comment-form__input(type="text", placeholder="Name", data-validate-field="name")
+                                .comment-form__label
+                                    input.comment-form__input(type="text", placeholder="E-mail", data-validate-field="email") 
+                            textarea.comment-form__textarea(placeholder="Your comment")
+                            .comment-form__checkbox-wrap
+                                input#cb2.comment-form__checkbox(type="checkbox", name="checkbox", data-validate-field="checkbox")
+                                label.comment-form__label(for="cb2") Save my name, email, and website in this browser for the next time I comment.
+                            button.comment-form__button(type="submit") 
+                                img(src="img/blog/form-button.svg", alt="")
+

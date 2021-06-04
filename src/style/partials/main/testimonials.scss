@@ -1,0 +1,287 @@
+.testimonials {
+    position: relative;
+
+    &__title {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+        width: 840/1427 * 100%;
+
+        @include tablet {
+            font-size: 56px;
+        }
+
+        @include tablet-1200 {
+            font-size: 48px;
+            width: 70%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include mobile-620 {
+            width: 100%;
+            font-size: 36px;
+        }
+
+        @include mobile-450 {
+            font-size: 28px;
+        }
+    }
+
+    &__swiper-container {
+        width: 900px;
+        height: fit-content;
+        margin-top: toVh(120);
+        position: relative;
+
+        @media (max-height: 800px) {
+            margin-top: toVh(70);
+        }
+
+        @include tablet-1200 {
+            width: 100%;
+            height: fit-content;
+        }
+
+        @include mobile {
+            margin-top: 25px;
+        }
+    }
+
+    &__swiper-content {
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: toVh(48);
+
+        @include tablet-1200 {
+            padding-top: 24px;
+            padding-left: 60px;
+            padding-right: 50px;
+        }
+
+        @include mobile-620 {
+            padding: 20px 0 0 40px;
+        }
+
+        @include mobile-450 {
+            padding: 0;
+        }
+    }
+
+    &__swiper-text {
+        font-size: 22px;
+        line-height: 140%;
+        color: #F3F3F3;
+        position: relative;
+
+        @include mobile {
+            font-size: 18px;
+        }
+
+        @include mobile-450 {
+            font-size: 16px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../img/quote.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 64px;
+            height: 48px;
+            top: toVh(-48);
+            left: -94px;
+
+            @include tablet-1200 {
+                width: 42px;
+                height: 32px;
+                top: -24px;
+                left: -49px;
+            }
+
+            @include mobile-620 {
+                width: 32px;
+                height: 22px;
+                top: -17px;
+                left: -38px;
+            }
+
+            @include mobile-450 {
+                display: none;
+            }
+        }
+    }
+
+    &__swiper-author {
+        font-size: 40px;
+        line-height: 120%;
+        color: #F3F3F3;
+        margin-top: toVh(50);
+
+        @include tablet-1200 {
+            margin-top: toVh(40);
+        }
+
+        @include mobile {
+            font-size: 24px;
+        }
+
+        @include mobile-450 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    }
+
+    &__swiper-author-info {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 140%;
+        color: #F3F3F3;
+        margin-top: 20px;
+
+        @include mobile {
+            font-size: 16px;
+        }
+
+        @include mobile-450 {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    }
+
+    &__swiper-social {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__swiper-social-item {
+        svg {
+            transition: .3s;
+
+            @include mobile-450 {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &:first-child {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            svg {
+                opacity: .8;
+            }
+        }
+    }
+
+    &__swiper-wrapper {
+        position: relative;
+    }
+
+    &__swiper-button-prev {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: 20px;
+
+        @include tablet-1200 {}
+
+        @include mobile-450 {
+            width: 32px;
+            height: 32px;
+        }
+
+        svg {
+            circle {
+                transition: .3s ease;
+            }
+
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
+        }
+
+    }
+
+    &__swiper-button-next {
+        position: relative;
+        top: 0;
+        right: 0;
+
+        @include mobile-450 {
+            width: 32px;
+            height: 32px;
+        }
+
+        svg {
+            circle {
+                transition: .3s ease;
+            }
+
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
+        }
+    }
+}
+
+.swiper-button-wrapper {
+    position: relative;
+    display: block;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-prev {
+    width: 50px;
+    height: 50px;
+
+    &::after {
+        content: '';
+    }
+}
+
+.swiper-button-next {
+    width: 50px;
+    height: 50px;
+
+    &::after {
+        content: '';
+    }
+}

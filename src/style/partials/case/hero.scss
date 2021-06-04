@@ -1,0 +1,154 @@
+.hero{
+    padding-top: 200px;
+    @include tablet{
+        padding-top: 70px;
+    }
+    @include tablet-1200{
+        padding-top: 50px;
+    }
+    &__img{
+        &-wrap{
+            display: flex;
+            height: 700px;
+            &:not(:first-child){
+                margin-top: 70px;
+                @include tablet-992{
+                    margin-top: 35px;
+                }
+            }
+            &:first-child{
+                height: 800px;
+                @include tablet-1200{
+                    height: 500px;
+                }
+                @include tablet-992{
+                    height: 400px;
+                }
+                @include mobile-620{
+                    height: 300px;
+                }
+                @include mobile-520{
+                    flex-direction: column;
+                    height: auto;
+                }
+            }
+            @include tablet-1200{
+                height: 500px;
+            }
+            @include mobile-620{
+                height: 300px;
+            }
+        }
+        &-wrapper{
+            display: flex;
+            height: 430px;
+            margin-top: 70px;
+            @include tablet-1200{
+                height: 300px;
+            }
+            @include tablet-992{
+                height: 190px;
+            }
+            @include mobile-620{
+                height: auto;
+                flex-direction: column;
+                margin-top: 35px;
+            }
+            >img{
+                @include mobile-620{
+                    width: 70%;
+                    margin: auto;
+                    &:not(:first-child){
+                        margin-top: 15px;
+                    }
+                }
+                @include mobile-450{
+                    width: 100%;
+                }
+            }
+            
+        }
+        &-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            &--mr-46{
+                margin-right: 46px;
+                @include tablet-1200{
+                    margin-right: 23px;
+                }   
+                @include mobile-520{
+                    margin-right: 0;
+                }
+            }
+            &--mr-36{
+                margin-right: 36px;
+                @include tablet-1200{
+                    margin-right: 15px;
+                }
+                @include mobile-620{
+                    margin-right: 0;
+                }
+            }
+            &--w-57{
+                width: 57%;
+                @include mobile-620{
+                    width: 50%;
+                }
+                @include mobile-520{
+                    width: 100%;
+                }
+            }
+            &--fb-72{
+                width: calc(43% - 23px);
+                @include mobile-620{
+                    width: 50%;
+                }
+                @include mobile-520{
+                    width: 100%;
+                }
+            }
+            &--w-33{
+                width: calc(33.333333% - 24px);
+                @include tablet-1200{
+                    width: calc(33.333333% - 10px);
+                }
+            }
+            &--mt-30{
+                @include mobile-520{
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    &__text{
+        &-wrap{
+            display: flex;
+        }
+        &-text{
+                font-family: 'SF Pro Display';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 140%;
+                color: #DBDBDB;
+                width: 100%;
+                margin-top: 200px;
+                max-width: 880px;
+                margin-right: auto;
+                @include tablet{
+                    margin-top: 100px;
+                }
+                @include tablet-1200{
+                    margin-top: 50px;
+                }
+        }
+        &-block{
+            width: 42%;
+            margin-right: 46px;
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+}

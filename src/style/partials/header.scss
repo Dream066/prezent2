@@ -1,0 +1,388 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 18px;
+    line-height: 140%;
+    background-color: transparent;
+    z-index: 20;
+
+    &-js {
+        background-color: #000;
+    }
+
+    &::after {}
+
+    &__wrapper {
+        width: 100%;
+        padding: 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            padding: 40px 60px;
+        }
+
+        @include tablet-1200 {
+            padding: 40px 60px;
+        }
+
+        @include mobile-620 {
+            padding: 20px;
+        }
+    }
+
+    &__left-inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: 485px;
+        width: 100%;
+
+        @include tablet-992 {
+            width: 100%;
+        }
+    }
+
+    &__logo-wrapper {}
+
+    &__logo {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        text-transform: uppercase;
+
+        i {
+            font-style: italic;
+            padding-right: 3px;
+
+            span {
+                color: blue;
+            }
+        }
+    }
+
+    &__author-mail {
+        position: relative;
+        transition: .3s ease;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        @include tablet-1200 {
+            margin: 0 auto;
+        }
+
+        @include mobile-450 {
+            display: none;
+        }
+
+        &::after {
+            transition: .3s ease;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            height: 1px;
+            background-color: transparent;
+        }
+
+        &:hover {
+            &::after {
+                right: 0;
+                background-color: $white-main;
+            }
+        }
+    }
+
+    &__right-inner {
+        justify-content: space-between;
+        display: flex;
+        width: 40%;
+
+        @include tablet-992 {
+            width: 40px;
+            justify-content: flex-end;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        @include tablet-992 {
+            display: none;
+        }
+
+        &-item {
+
+            &:first-child {
+                margin-right: 50px;
+            }
+
+            &:hover {
+                &::after {
+                    right: 0;
+                    background-color: $white-main;
+                }
+            }
+        }
+
+        &-link {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                transition: .3s ease;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background-color: transparent;
+            }
+
+            &:hover {
+                &::after {
+                    right: 0;
+                    background-color: $white-main;
+                }
+            }
+        }
+    }
+
+    &__burger {
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        span {
+            position: relative;
+            width: 40px;
+            height: 10px;
+            display: block;
+            transition: .3s;
+
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 40px;
+                height: 2px;
+                background-color: #F3F3F3;
+                position: absolute;
+                background-color: $white-main;
+            }
+
+            &::after {
+                top: 0;
+            }
+
+            &::before {
+                bottom: 0;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #1F1F1F;
+        width: 647px;
+        height: 100vh;
+        z-index: 100;
+        font-size: 40px;
+        line-height: 120%;
+        color: $gray;
+        transition: .3s;
+        transform: translateX(100%);
+
+        @include mobile-620 {
+            width: 100vw;
+            font-size: 24px;
+        }
+
+        @include mobile-350 {
+            font-size: 20px;
+        }
+
+        &-list {
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity .6s ease;
+            transition-delay: .45s;
+
+        }
+
+        &.active {
+            transform: translateX(0);
+
+            .header__menu-social {
+                opacity: 1;
+            }
+
+            .header__menu-list {
+                opacity: 1;
+            }
+
+            .header__menu-contacts {
+                opacity: 1;
+            }
+        }
+
+        &-social {
+            position: absolute;
+            top: 40px;
+            left: 150px;
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 140%;
+            color: #F3F3F3;
+            display: flex;
+            z-index: 101;
+            opacity: 0;
+            transition: opacity .6s ease;
+            transition-delay: .3s;
+
+            @include mobile-620 {
+                left: 40px;
+            }
+        }
+
+        &-content {
+            position: relative;
+            padding-top: toVh(150);
+            padding-left: 150px;
+            height: 100%;
+
+            @include mobile-620 {
+                padding-left: 20%;
+                padding-top: 30%;
+            }
+
+            @include mobile-350 {
+                padding-left: 40px;
+                padding-top: 100px;
+            }
+        }
+
+        &-exit {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 27px;
+            right: 80px;
+            transition: .3s ease;
+            cursor: pointer;
+            z-index: 3;
+
+            @include mobile-620 {
+                right: 27px;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                left: 20px;
+                display: block;
+                height: 40px;
+                width: 2px;
+                background-color: $white-main;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+            }
+
+
+        }
+
+        &-item {
+            &.active {
+                & a::after {
+                    right: 0;
+                    background-color: $white-main;
+                }
+            }
+
+            &:not(:first-child) {
+                margin-top: toVh(30);
+
+                @include mobile-620 {
+                    margin-top: 20px;
+                }
+
+                @include mobile-350 {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &-link {
+            transition: .3s ease;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                transition: .3s ease;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background-color: transparent;
+            }
+
+            &:hover {
+                color: $white-main;
+            }
+        }
+
+        &-contacts {
+            font-size: 18px;
+            line-height: 140%;
+            color: $white-main;
+            position: absolute;
+            bottom: 60px;
+            right: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            opacity: 0;
+            transition: opacity .6s ease;
+            transition-delay: .55s;
+
+            @include tablet-992 {
+                bottom: 70px;
+                right: 45px;
+            }
+        }
+
+        &-contact {
+            &:last-child {
+                margin-top: 7px;
+            }
+        }
+    }
+}

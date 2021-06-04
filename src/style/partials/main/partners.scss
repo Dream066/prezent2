@@ -1,0 +1,124 @@
+.partners {
+    position: relative;
+
+    &__container {}
+
+    &__title {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+        width: 840/1427 * 100%;
+
+        @media (max-height:900px) {
+            font-size: 64px;
+
+        }
+
+        @include tablet {
+            font-size: 56px;
+            width: 80%;
+        }
+
+        @include tablet-1200 {
+            width: 100%;
+        }
+
+        @include mobile {
+            font-size: 42px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: toVh(116);
+
+        @media (max-height:900px) {
+            margin-top: 0;
+        }
+
+        @include tablet {
+            margin-top: toVh(70);
+        }
+
+        @include tablet-1200 {
+            margin-top: 25px;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__img-wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex: 0 0 auto;
+        max-width: 195px;
+        width: 100%;
+
+        &:hover {
+            img {
+                transform: rotate(90deg);
+            }
+        }
+
+        @include tablet-1200 {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        @include mobile-620 {
+            max-width: 100%;
+        }
+    }
+
+    &__img {
+        cursor: pointer;
+        width: 195px;
+        height: 195px;
+        transition: .3s ease;
+
+        @include tablet-1200 {
+            width: 120px;
+            height: 120px;
+            margin-left: auto;
+        }
+    }
+
+    &__partners {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1085/1427 * 100%;
+
+        @include tablet-1200 {
+            width: 100%;
+        }
+    }
+
+    &__partner {
+        width: 33.333333%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: toVh(46);
+
+        @include tablet-1200 {
+            padding: 20px;
+        }
+
+        @include tablet-1000 {
+            justify-content: left;
+            padding: 15px 5px;
+        }
+
+        @include mobile-620 {
+            justify-content: center;
+
+            padding: 20px;
+            width: 50%;
+        }
+    }
+}

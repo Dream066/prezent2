@@ -1,0 +1,44 @@
+extends layouts/layout
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+block main
+	.wrapper#preloader
+		.main-circle
+			.green-circle
+				.brown-circle
+	include components/nav-widget
+	div#pagepiling
+		.section.section-home.pp-scrollable
+			canvas.noise
+			include components/home
+		.section.section-cases.pp-scrollable
+			canvas.noise
+			include components/cases
+		.section.section-about.pp-scrollable 
+			canvas.noise
+			include components/about
+		.section.section-services.pp-scrollable
+			canvas.noise
+			include components/services
+		.section.section-partners.pp-scrollable
+			canvas.noise
+			include components/partners
+		.section.section-awards.pp-scrollable
+			canvas.noise
+			include components/awards
+		.section.section-testimonials.pp-scrollable
+			canvas.noise
+			include components/testimonials
+		.section.section-blog.pp-scrollable 
+			canvas.noise
+			include components/blog
+		.section.section-contacts.pp-scrollable 
+			canvas.noise
+			include components/contacts
+

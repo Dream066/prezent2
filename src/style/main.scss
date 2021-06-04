@@ -1,0 +1,92 @@
+@import "helpers/variable.scss";
+@import "helpers/_mixins.scss";
+
+/* ------------------------------------------------------------------------------
+
+  1. Global
+    1.1 General
+    1.2 Typography
+  2. Blocks
+    2.11 Section
+    2.12 Home
+    2.13 About
+    2.14 About video
+    2.15 Main bloks
+    2.16 Partners
+    2.17 Awards
+    2.18 Testimonials
+    2.19 Contacts
+    2.2 Blog
+    2.21 Cases
+    2.22 Preloader
+  3. Header
+  4. Nav widget
+
+---------------------------------------------------------------------------------*/
+
+//ignorescss @import "helpers/reset.scss";
+//ignorescss @import 'libs/jquery.pagepiling.min.css';
+//ignorescss @import 'libs/swiper.min.scss';
+//ignorescss @import 'libs/jquery.fancybox.min.css';
+//ignorescss @import 'libs/just-validate.min.css';
+
+/*-------------------------------------------------------------------------------
+  1. Global
+-------------------------------------------------------------------------------*/
+/* 1.1 General */
+@import "helpers/setting.scss";
+@import "helpers/layout.scss";
+
+/* 1.2 Typography */
+@import "helpers/fonts.scss";
+
+/*-------------------------------------------------------------------------------
+  2. Blocks
+-------------------------------------------------------------------------------*/
+
+/* 2.11 Section */
+@import "partials/main/section.scss";
+
+/* 2.12 Home */
+@import "partials/main/home.scss";
+
+/* 2.13 About */
+@import "partials/main/about.scss";
+
+/* 2.15 Main bloks */
+@import "partials/main/services.scss";
+
+/* 2.16 Partners */
+@import "partials/main/partners.scss";
+
+/* 2.17 Awards */
+@import "partials/main/awards.scss";
+
+/* 2.18 Testimonials */
+@import "partials/main/testimonials.scss";
+
+/* 2.19 Contacts */
+@import "partials/main/contacts.scss";
+
+/* 2.2 Blog */
+@import "partials/main/blog.scss";
+
+/* 2.21 Cases */
+@import "partials/main/cases.scss";
+
+/* 2.22 Preloader */
+@import "partials/main/preloader.scss";
+
+/*-------------------------------------------------------------------------------
+  3. Header
+-------------------------------------------------------------------------------*/
+@import "partials/header.scss";
+
+/*-------------------------------------------------------------------------------
+  4. Nav widget
+-------------------------------------------------------------------------------*/
+@import "partials/nav-widget.scss";
+/*-------------------------------------------------------------------------------
+  5. Noize
+-------------------------------------------------------------------------------*/
+@import "partials/noize.scss";

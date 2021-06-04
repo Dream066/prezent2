@@ -1,0 +1,182 @@
+.blog {
+    position: relative;
+
+    &__container {
+        position: relative;
+
+        @include mobile {
+            padding-bottom: 70px;
+        }
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 110%;
+        color: #F3F3F3;
+
+        @include tablet-1000 {
+            font-size: 56px;
+        }
+
+        @include mobile-520 {
+            font-size: 36px;
+        }
+    }
+
+    &__content {
+        margin-top: toVh(100);
+        margin-right: 14vw;
+
+        @media (max-width:1920px) {
+            margin-right: 180px;
+        }
+
+        @media (max-height: 900px) {
+            margin-top: toVh(50);
+        }
+
+        @include tablet {
+            margin-right: 50px;
+        }
+
+        @include tablet-1200 {
+            margin-right: 0px;
+        }
+    }
+
+    &__swiper-link {
+        &:hover {
+            .blog__swiper-img-wrapper {
+                transform: scale(1.05);
+            }
+        }
+
+    }
+
+    &__swiper-container {
+        width: 100%;
+        margin: -20px;
+        overflow: hidden;
+    }
+
+    &__swiper-slide {
+        padding: 20px;
+    }
+
+    &__swiper-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &__swiper-img-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: toVh(425);
+        width: 100%;
+        transition: transform .3s ease;
+    }
+
+    &__swiper-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 450px;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        object-position: top;
+    }
+
+    &__swiper-card-date {
+        font-size: 18px;
+        line-height: 140%;
+        margin-top: toVh(20);
+        color: #DBDBDB;
+    }
+
+    &__swiper-card-desc {
+        margin-top: toVh(10);
+        font-size: 22px;
+        line-height: 140%;
+        color: #F3F3F3;
+
+        @include tablet-1200 {
+            font-size: 20px;
+        }
+    }
+
+    &__swiper-button-prev {
+        position: absolute;
+        top: 25px;
+        right: 70px;
+        left: inherit;
+        cursor: pointer;
+
+        @include mobile {
+            top: auto;
+            bottom: 0;
+        }
+
+        svg {
+            circle {
+                transition: .3s ease;
+            }
+
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
+        }
+    }
+
+    &__swiper-button-next {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        left: inherit;
+        cursor: pointer;
+
+        @include mobile {
+            top: auto;
+            bottom: 0;
+        }
+
+        svg {
+            circle {
+                transition: .3s ease;
+            }
+
+            path {
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                circle {
+                    stroke: #f3f3f3;
+                }
+
+                path {
+                    stroke: #f3f3f3;
+                }
+            }
+        }
+    }
+}
+
+.swiper-slide {
+    width: 33.33333%;
+}

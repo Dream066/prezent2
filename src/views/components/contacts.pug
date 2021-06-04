@@ -1,0 +1,19 @@
+.section-main.contacts.js-section#contacts 
+    .container-main
+        .contacts__title I value transparency and integrity
+        .contacts__wrap 
+            .contacts__contacts 
+                .contacts__contacts-head My contact info
+                ul.contacts__contacts-list.contacts-list
+                    li.contacts-list__item Meininger Strasse 83, Berlin, Germany
+                    li.contacts-list__item + 34 2454 3459 21
+                    li.contacts-list__item hello@georgelewis.com
+            form.contacts-form.js-form(action="#") 
+                .contacts-form__wrap 
+                    .contacts-form__label
+                        input.contacts-form__input(type="text", placeholder="Name" data-validate-field="name")
+                    .contacts-form__label
+                        input.contacts-form__input(type="text", placeholder="E-mail" data-validate-field="email") 
+                textarea.contacts-form__textarea(placeholder="Your comment")
+                button.contacts-form__button 
+                    img(src="img/blog/form-button.svg", alt="img")

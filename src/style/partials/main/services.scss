@@ -1,0 +1,185 @@
+.services {
+    position: relative;
+
+    &__container {}
+
+    &__title {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 70px;
+        line-height: 110%;
+        color: $white-main;
+        width: 850/1427 * 100%;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include tablet-1200 {
+            font-size: 56px;
+        }
+
+        @include tablet-1000 {
+            font-size: 42px;
+        }
+
+        @include mobile-620 {
+            width: 100%;
+        }
+    }
+
+    &__row {
+        margin-top: toVh(50);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-height: 950px) {
+            margin-top: toVh(30);
+        }
+
+        @media (max-height: 950px) {
+            margin-top: toVh(30);
+        }
+
+        @include tablet-1000 {
+            flex-direction: column;
+        }
+    }
+
+    &__img-wrapper {
+        margin-right: 60px;
+        max-width: 546px;
+        width: 100%;
+        height: toVh(594);
+        overflow: hidden;
+        position: relative;
+
+        @include tablet-1000 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        max-height: 594px;
+        position: absolute;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    &__inner {
+        width: 700/ 1427 * 100%;
+
+        @include tablet-1000 {
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
+
+    &__skills {
+        &-desc {
+            width: 547/720 * 100%;
+            margin-top: toVh(70);
+            font-size: 18px;
+            line-height: 140%;
+            color: #F3F3F3;
+
+            @include tablet {
+                margin-top: toVh(35);
+                width: 100%;
+            }
+
+            @include tablet-1200 {
+                margin-top: toVh(20);
+                width: 100%;
+            }
+        }
+    }
+
+    &__skill {
+        &:not(:first-child) {
+            margin-top: toVh(50);
+
+            @include tablet {
+                margin-top: toVh(35);
+            }
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-title {
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 40px;
+            line-height: 120%;
+            color: #F3F3F3;
+
+            @include tablet-1200 {
+                font-size: 28px;
+            }
+
+            @include mobile-620 {
+                font-size: 28px;
+            }
+        }
+
+        &-percent {
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 130%;
+            color: #F3F3F3;
+        }
+
+        &-progress {
+            margin-top: toVh(35);
+            display: flex;
+
+            @include tablet-1200 {
+                margin-top: 15px;
+            }
+        }
+
+        &-gold-line {
+            width: 70%;
+            height: 5px;
+            background: #E9CF49;
+
+            &--90 {
+                width: 90%;
+            }
+
+            &--80 {
+                width: 80%;
+            }
+        }
+
+        &-white-line {
+            width: 30%;
+            height: 5px;
+            background: #F3F3F3;
+
+            &--20 {
+                width: 20%;
+            }
+
+            &--10 {
+                width: 10%;
+            }
+        }
+    }
+
+}

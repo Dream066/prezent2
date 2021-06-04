@@ -1,0 +1,107 @@
+.next{
+    padding-top: 250px;
+    padding-bottom: 250px;
+    @include tablet{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    @include tablet-1200{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    &__inner{
+        padding-left: 293px;
+        @include tablet{
+            padding-left: 0;
+        }
+    }
+    &__title{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 120%;
+        color: #DBDBDB;
+    }
+    &__link{
+        position: relative;
+        // background: url(../img/case/next-img.jpg);
+        margin-top: 70px;
+        width: 100%;
+        height: 300px;
+        padding: 90px 275px 90px 150px;
+        @include tablet-1200{
+            padding: 37px 90px 37px 90px;
+            height: 200px;
+        }
+        @include tablet-992{
+            padding: 57px 70px 52px 70px;
+        }
+        @include mobile-620{
+            padding: 56px 20px 56px 20px;
+        }
+        @include mobile-520{
+            height: 225px;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(31, 31, 31, 0.5), rgba(31, 31, 31, 0.5))
+        }
+        &-img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+        &-wrap{
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mobile-520{
+                flex-direction: column;
+            }
+        }
+        &-name{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 70px;
+            line-height: 110%;
+            color: #F3F3F3;
+            @include tablet-1200{
+                font-size: 50px;
+            }
+            @include mobile-450{
+                font-size: 32px;
+            }
+        }
+        &-button{
+            cursor: pointer;
+            transition: .3s ease;
+            transform: rotate(0deg);
+            &:hover{
+                transform: rotate(-90deg);
+            }
+            @include tablet-992{
+                width: 90px;
+                height: 90px;
+            }
+            @include mobile-520{
+                margin-top: 20px;
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+
+}

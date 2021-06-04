@@ -1,0 +1,35 @@
+.container {
+    max-width: calc(100% - 200px);
+    margin: auto;
+}
+
+.line {
+    height: 2px;
+    background: #787A7C;
+    width: 100%;
+}
+
+#pp-nav {
+    display: none;
+}
+
+body {
+    background: #000;
+    color: $white-main;
+}
+
+.section {
+    background-color: #000;
+    opacity: 0;
+
+    // transition: opacity .3s ease;
+    @include tablet-1000 {
+        opacity: 1;
+        position: relative;
+
+    }
+
+    &.active {
+        opacity: 1;
+    }
+}

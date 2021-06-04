@@ -1,0 +1,121 @@
+.about {
+    position: relative;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet-992 {
+            flex-direction: column;
+        }
+
+        &-title {
+            width: 840/1426 * 100%;
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 70px;
+            line-height: 110%;
+            color: $white-main;
+            margin-right: 40px;
+
+            @include tablet {
+                font-size: 48px;
+            }
+
+            @include tablet-992 {
+                width: 90%;
+            }
+
+            @include mobile-520 {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        &-desc {
+            width: 547/1427 * 100%;
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 140%;
+            color: $white-main;
+
+            @include tablet {
+                font-size: 16px;
+            }
+
+            @include tablet-992 {
+                margin-top: 25px;
+                width: 100%;
+            }
+
+            @include mobile-520 {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__img-wrapper {
+        position: relative;
+        margin-top: toVh(130);
+        height: toVh(516);
+        overflow: hidden;
+
+        @media (max-height: 850px) {
+            margin-top: toVh(35);
+            height: toVh(480);
+
+        }
+
+        @include tablet-1200 {
+            margin-top: 30px;
+        }
+    }
+
+    &__video {
+        &:hover {
+
+            +.about__img {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__img-play {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-50%);
+        z-index: 2;
+        cursor: pointer;
+        transition: .3s ease;
+
+        @include mobile {
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: .3s ease;
+
+        @media (max-width: 1920px) {
+            width: 1515px;
+            height: 517px;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@mixin tablet {
+    @media (max-width: 1559px) {
+        @content;
+    }
+}
+
+@mixin tablet-1200 {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin tablet-1000 {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin tablet-992 {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin mobile-620 {
+    @media (max-width: 620px) {
+        @content;
+    }
+}
+
+@mixin mobile-520 {
+    @media (max-width: 520px) {
+        @content;
+    }
+}
+
+@mixin mobile-450 {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
+@mixin mobile-350 {
+    @media (max-width: 350px) {
+        @content;
+    }
+}
+
+// Height
+
+@mixin height-550 {
+    @media (max-height: 550px) {
+        @content;
+    }
+}
+
+@mixin height-420 {
+    @media (max-height: 420px) {
+        @content;
+    }
+}
+
+@mixin resize-img-wrapper {
+    position: relative;
+    width: 100%;
+
+    &::after {
+        content: '';
+        display: block;
+        @content;
+    }
+}
+
+@mixin resize-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+$resolutiond: 1920;
+
+
+@function vwd($px) {
+    @return (($px/$resolutiond) * 100)+vw;
+}
+
+@function vwx($px) {
+    @return (($px/$resolutiond) * 80)+vw;
+}
+
+@function novwx($px) {
+    @return ($px)+px;
+}
+
+
+$baseHeight: 1080;
+
+@function toVh($px) {
+    @return (($px/$baseHeight) * 100)+vh;
+}

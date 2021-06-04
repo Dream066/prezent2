@@ -1,0 +1,104 @@
+.info {
+    &-inner {
+        padding-left: 293px;
+        @include tablet{
+        padding-left: 0;
+        }
+    }
+    &__wrapper{
+        width: 100%;
+        &-list{
+            width: calc(73% - 366px);
+            display: flex;
+            justify-content: flex-end;
+            @include tablet-1200{
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    }
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 110px;
+        line-height: 110%;
+        color: #F3F3F3;
+        @include mobile{
+            font-size: 88px;
+        }
+        @include mobile-520{
+            font-size: 60px;
+        }
+    }
+
+    &__line {
+        margin-top: 70px;
+        @include tablet{
+            margin-top: 35px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        margin-top: 150px;
+        @include tablet-1200{
+            flex-direction: column;
+            margin-top: 75px;
+        }
+    }
+
+    &__list {
+        margin-right: 46px;
+        max-width: 400px;
+        width: 100%;
+        @include tablet-1200{
+            width: 100%;
+        }
+
+        &-item {
+            &:not(:first-child){
+                margin-top: 67px;
+                @include tablet-992{
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        &-subtext {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 140%;
+            color: #F3F3F3;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 140%;
+            color: #F3F3F3;
+        }
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 120%;
+        color: #DBDBDB;
+        width: 100%;
+        max-width: 987px;
+        @include tablet{
+            font-size: 32px;
+        }
+        @include tablet-1200{
+            margin-top: 40px;
+        }
+        @include mobile-620{
+            font-size: 26px;
+        }
+    }
+}
+

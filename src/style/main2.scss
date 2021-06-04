@@ -1,0 +1,64 @@
+@import "helpers/_mixins.scss";
+@import "helpers/variable.scss";
+
+/* ------------------------------------------------------------------------------
+
+  1. Global
+    1.1 General
+    1.2 Typography
+  2. Blocks
+    2.1 Case
+    2.2 Info
+    2.3 Img
+    2.4 Next
+    2.5 Hero
+    2.6 Blog
+    2.7 Checkbox
+    2.8 Preloader
+  3. Inner page header
+
+---------------------------------------------------------------------------------*/
+
+//ignorescss @import 'helpers/reset.scss';
+
+/*-------------------------------------------------------------------------------
+  1. Global
+-------------------------------------------------------------------------------*/
+/* 1.1 General */
+@import "helpers/setting.scss";
+@import "helpers/layout.scss";
+
+/* 1.2 Typography */
+@import "helpers/fonts.scss";
+
+/*-------------------------------------------------------------------------------
+  2. Blocks
+-------------------------------------------------------------------------------*/
+/* 2.1 Case */
+@import "partials/case/case.scss";
+
+/* 2.2 Info */
+@import "partials/case/info.scss";
+
+/* 2.3 Img */
+@import "partials/case/img.scss";
+
+/* 2.4 Next */
+@import "partials/case/next.scss";
+
+/* 2.5 Hero */
+@import "partials/case/hero.scss";
+
+/* 2.6 Blog */
+@import "partials/blog/blog.scss";
+
+/* 2.7 Checkbox */
+@import "partials/blog/checkbox.scss";
+
+/* 2.8 Preloader */
+@import "partials/main/preloader.scss";
+
+/*-------------------------------------------------------------------------------
+  3. Inner page header
+-------------------------------------------------------------------------------*/
+@import "partials/header-not-main.scss";
